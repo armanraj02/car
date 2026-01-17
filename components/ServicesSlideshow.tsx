@@ -7,19 +7,21 @@ interface ServicesSlideshowProps {
     onClose: () => void;
 }
 
+import { getBasePath } from "@/lib/utils";
+
 const services = [
     {
-        image: "/images/services/service1.jpg",
+        image: getBasePath("/images/services/service1.jpg"),
         title: "Global Reach",
         description: "Experience Porsche service standards at our premier locations worldwide."
     },
     {
-        image: "/images/services/service2.jpg",
+        image: getBasePath("/images/services/service2.jpg"),
         title: "Master Technicians",
         description: "Your vehicle verified by certified experts using state-of-the-art diagnostics."
     },
     {
-        image: "/images/services/service3.jpg",
+        image: getBasePath("/images/services/service3.jpg"),
         title: "Dedicated Care",
         description: "From routine maintenance to complex repairs, we ensure perfection."
     }

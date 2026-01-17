@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getBasePath } from "@/lib/utils";
 import { Zap } from "lucide-react";
 
 export default function Preloader() {
@@ -25,7 +26,7 @@ export default function Preloader() {
                     {/* Background Image */}
                     <div
                         className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: 'url(/images/intro_bg.jpg)' }}
+                        style={{ backgroundImage: `url(${getBasePath('/images/intro_bg.jpg')})` }}
                     />
                     {/* Gradient Overlay for Text Visibility */}
                     <div className="absolute inset-0 bg-black/30" />

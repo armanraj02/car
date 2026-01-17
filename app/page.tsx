@@ -1,5 +1,5 @@
-"use client";
 import React, { useState, useEffect } from "react";
+import { getBasePath } from "@/lib/utils";
 import { products } from "../data/products";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -37,10 +37,13 @@ export default function Home() {
 
   return (
     <main className="relative bg-black min-h-screen">
+
+
+      // ...
       {/* Global Background Image (Dimmed) */}
       <div
         className="fixed inset-0 z-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: 'url(/images/intro_bg.jpg)' }}
+        style={{ backgroundImage: `url(${getBasePath('/images/intro_bg.jpg')})` }}
       />
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-black/50 via-black/80 to-black pointer-events-none" />
 

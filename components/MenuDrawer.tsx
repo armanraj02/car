@@ -21,12 +21,14 @@ const navLinks = [
     "Experience"
 ];
 
+import { getBasePath } from "@/lib/utils";
+
 // Mapping product IDs to menu images
 const menuImages: Record<string, string> = {
-    "718": "/images/menu/718.jpg",
-    "porsche": "/images/menu/911.jpg",
-    "taycan": "/images/menu/taycan.jpg",
-    "panamera": "/images/menu/panamera.jpg",
+    "718": getBasePath("/images/menu/718.jpg"),
+    "porsche": getBasePath("/images/menu/911.jpg"),
+    "taycan": getBasePath("/images/menu/taycan.jpg"),
+    "panamera": getBasePath("/images/menu/panamera.jpg"),
 };
 
 export default function MenuDrawer({ isOpen, onClose, products, onSelectProduct, onServicesClick, onExperienceClick }: MenuDrawerProps) {

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getBasePath } from "@/lib/utils";
 import { X, ArrowDown } from "lucide-react";
 
 interface ExperienceOverlayProps {
@@ -9,13 +10,13 @@ interface ExperienceOverlayProps {
 
 const experiences = [
     {
-        image: "/images/experience/exp1.jpg",
+        image: getBasePath("/images/experience/exp1.jpg"),
         title: "The Porsche Center",
         subtitle: "Architecture of Dreams",
         description: "Step into a world where design meets performance. Our Porsche Centers are more than just showrooms; they are galleries dedicated to the art of the sports car."
     },
     {
-        image: "/images/experience/exp2.jpg",
+        image: getBasePath("/images/experience/exp2.jpg"),
         title: "Personal Commissioning",
         subtitle: "Your Vision, Realized",
         description: "In our Exclusive Manufaktur lounges, consult with design experts to tailor every detail of your Porsche. From custom paint to bespoke leather, the only limit is your imagination."
@@ -114,9 +115,8 @@ export default function ExperienceOverlay({ isOpen, onClose }: ExperienceOverlay
 
                             {/* Right Side - Visual */}
                             <div className="w-full md:w-1/2 h-full bg-black relative overflow-hidden group">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-1000 grayscale group-hover:grayscale-0"
-                                    style={{ backgroundImage: 'url(/images/experience/porsche_center_event.jpg)' }}
+                                className="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-1000 grayscale group-hover:grayscale-0"
+                                style={{ backgroundImage: `url(${getBasePath('/images/experience/porsche_center_event.jpg')})` }}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
 

@@ -1,6 +1,6 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { getBasePath } from "@/lib/utils";
 
 interface EngineBlueprintProps {
     image?: string;
@@ -39,7 +39,7 @@ export default function EngineBlueprint({ image, title, description }: EngineBlu
                     {/* Car Image in Center */}
                     <div
                         className="absolute inset-0 bg-cover bg-center opacity-60 transition-all duration-700"
-                        style={{ backgroundImage: `url(${image || '/images/porsche/1.jpg'})` }}
+                        style={{ backgroundImage: `url(${image || getBasePath('/images/porsche/1.jpg')})` }}
                     />
                     <div className="absolute inset-0 bg-black/40" /> {/* Dimmer */}
 

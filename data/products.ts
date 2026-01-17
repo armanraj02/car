@@ -1,3 +1,4 @@
+import { getBasePath } from "@/lib/utils";
 
 export interface Product {
     id: string;
@@ -33,8 +34,8 @@ export const products: Product[] = [
         subName: "Perfectly balanced.",
         price: "$106,500",
         description: "414 HP - 4.2s 0-60 - Naturally Aspirated Flat-Six",
-        folderPath: "/images/porsche", // Reuse 911 sequence as placeholder
-        heroImage: "/images/hero/718.jpg",
+        folderPath: getBasePath("/images/porsche"), // Reuse 911 sequence as placeholder
+        heroImage: getBasePath("/images/hero/718.jpg"),
         themeColor: "#d92e2e",
         gradient: "linear-gradient(135deg, #d92e2e 0%, #000000 100%)",
         features: ["414 HP", "4.2s 0-60", "Mid-Engine"],
@@ -70,7 +71,7 @@ export const products: Product[] = [
         subName: "German precision.",
         price: "$207,000",
         description: "640 HP - 2.6s 0-60 - Twin-Turbo Flat-Six",
-        folderPath: "/images/porsche",
+        folderPath: getBasePath("/images/porsche"),
         themeColor: "#C0C0C0",
         gradient: "linear-gradient(135deg, #2c2c2c 0%, #000000 100%)",
         features: ["640 HP", "2.6s 0-60", "Twin-Turbo"],
@@ -106,8 +107,8 @@ export const products: Product[] = [
         subName: "Soul, electrified.",
         price: "$187,600",
         description: "750 HP - 2.6s 0-60 - All-Electric",
-        folderPath: "/images/porsche",
-        heroImage: "/images/hero/taycan.jpg",
+        folderPath: getBasePath("/images/porsche"),
+        heroImage: getBasePath("/images/hero/taycan.jpg"),
         themeColor: "#00bfae",
         gradient: "linear-gradient(135deg, #00bfae 0%, #000000 100%)",
         features: ["750 HP", "2.6s 0-60", "Electric"],
@@ -143,8 +144,8 @@ export const products: Product[] = [
         subName: "Sports car for four.",
         price: "$179,800",
         description: "620 HP - 2.9s 0-60 - Luxury Executive",
-        folderPath: "/images/porsche",
-        heroImage: "/images/hero/panamera.jpg",
+        folderPath: getBasePath("/images/porsche"),
+        heroImage: getBasePath("/images/hero/panamera.jpg"),
         themeColor: "#ffffff",
         gradient: "linear-gradient(135deg, #444 0%, #000 100%)",
         features: ["620 HP", "2.9s 0-60", "Hybrid"],
