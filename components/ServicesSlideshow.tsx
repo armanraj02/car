@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+"use client";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { getBasePath } from "@/lib/utils";
 
 interface ServicesSlideshowProps {
     isOpen: boolean;
     onClose: () => void;
 }
-
-import { getBasePath } from "@/lib/utils";
 
 const services = [
     {
